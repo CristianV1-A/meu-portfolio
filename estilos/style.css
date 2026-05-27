@@ -7,18 +7,31 @@
   --destaque-inverso
   --fundo-card
 */
+
+/* Ciano Luminoso - HEX #00FFFF
+   Verde Neon - HEX #00FF00
+   Amarelo Brilhoso - HEX #FFF00F
+   Vermelho Vibrante - HEX #FF0000
+   Azul-escuro - #0B0513
+*/ 
+
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
 }
 :root{
-  --fundo-principal: #f5f5f5;
-  --texto: #222222;
+  --fundo-principal: #F2E6D8;
+  --texto: #0B0513;
   --texto-inverso: #ffffff;
   --destaque: #0077ff;
   --destaque-inverso:#66bbff;
   --fundo-card:#ffffff;
+  --borda: #04a4b9;
+  --barra-0-50: #F20732;
+  --barra-51-70: #F2A81D;
+  --barra-71-85: #22F26B;
+  --barra-86-100: #66FAFD;
 }
 
 body.escuro{
@@ -64,22 +77,23 @@ header{
  }
 
  nav#menu a:hover{
-  background-color: var(--destaque-inverso);
-  color: var(--destaque);
+  color: rgb(207, 206, 206);
   transition: background-color 0.5s;
  }
 
  main{
   display: grid;
-  grid-template-columns: auto 90vw auto ;
-  margin-top: 20px;
+  grid-template-columns: auto 90vw;
+  
+  
  }
  section#ficha{
   background-color: var(--fundo-card);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   grid-column: 2;
-  margin-right: 15px;
+  margin: 10px;
+  border: 1px solid var(--borda);
 
  }
  section#ficha img.foto{
@@ -97,20 +111,26 @@ header{
 
  section#ficha h1{
   color: var(--destaque);
-  margin: 15px 0;
+  margin: 15px;
   font-size: 1.6em;
   text-align: left;
+ }
+ section#ficha p{
+  text-indent: 25px;
+  text-align:justify;
+  hyphens: auto;
+  text-justify: inter-word;
  }
  div#social{
   display: flex;
   justify-content: center;
   align-items:center;
-  font-size:1.4em;
+  font-size: 1.4em;
   gap: 15px;
   margin-top: 15px;
  }
  div#social a {
-  color: var(--destaque);
+  color: var(--texto);
  }
  div#social a:hover{
   color: var(--destaque-inverso);
@@ -122,13 +142,15 @@ section#detalhes{
  article{
   background-color: var(--fundo-card);
   padding: 20px;
+  margin-right: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--borda);
  }
 
 article h2{
-  color:var(--destaque);
+  color:var(--texto);
   margin-bottom: 20px;
 }
 
@@ -136,6 +158,7 @@ article h2{
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+  
 
 }
 #skill-container .info{
@@ -167,15 +190,16 @@ article h2{
 #formacao-container{
   display: flex;
   flex-direction: column-reverse;
-  gap: 15px;
-
+  gap: 20px;
 }
 
 #formacao-container .curso{
-  background-color: var(--fundo-principal);
+  background-color: var(--fundo-card);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.288);
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
   padding-left: 15px;
+  padding: 10px;
   transition: border-width 0.5s, border-color 0.5s;
 
 }
@@ -205,11 +229,12 @@ article h2{
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: var(--fundo-principal);
+  background-color: var(--fundo-card);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.288);
   padding: 10px;
   border-left: 5px solid var(--destaque-inverso);
   transition: border-color 0.5s, border-width 0.5s;
-
+  border-radius: 15px;
 }
 
 #projeto-container .projeto:hover{
